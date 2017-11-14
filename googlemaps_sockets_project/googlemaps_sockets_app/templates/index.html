@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_header %}
+<style>
+#map {
+  height: 100%;
+}
+html, body,.site-wrapper, .site-wrapper-inner, .cover-container, .container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+main{
+  height: 100%;
+  width: 100%;
+}
+</style>
+{% endblock %}
+{% block title %}Google Maps Sockets{% endblock %}
+
+{% block header_text %}Google Maps Sockets{% endblock %}
+
+
+{% block content %}
+<div id="map"></div>
+{% endblock %}
+
+{% block extra_body %}
+<script src="{% static "main.js" %}"></script>
+<script>
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw7IyxgJQoaVo-QKCat9lrpd0zT7NLV7Y&callback=initMap">
+    </script>
+{% endblock %}
